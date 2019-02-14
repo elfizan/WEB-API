@@ -17,6 +17,7 @@ function LoadIndexSupplier() {
             var i = 1;
             $.each(data, function (index, val) {
                 html += '<tr>';
+                // untuk menampilkan no
                 html += '<td>' + i + '</td>';
                 html += '<td>' + val.Name + '</td>';
                 //nampilin foreign key
@@ -113,6 +114,7 @@ function Delete(Id) {
 function ClearScreen() {
     $('#myModal').on('hidden.bs.modal', function () {
         $(this).find("input,textarea,select").val('').end();
-
+        $('#Update').hide();
+        $('#Save').show();
     });
 };
